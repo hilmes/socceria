@@ -27,12 +27,15 @@ export const metadata: Metadata = {
   title: "Socceria — Brooklyn",
   description:
     "Upscale Mexican cantina in Brooklyn, NYC. Wood-fired dishes, handcrafted cocktails, and the soul of Mexico. Open Tuesday through Sunday.",
+  metadataBase: new URL("https://socceria.nyc"),
   openGraph: {
     title: "Socceria — Brooklyn",
     description:
       "Upscale Mexican cantina in Brooklyn, NYC. Wood-fired dishes, handcrafted cocktails, and the soul of Mexico.",
     type: "website",
     locale: "en_US",
+    url: "https://socceria.nyc",
+    siteName: "Socceria",
   },
 };
 

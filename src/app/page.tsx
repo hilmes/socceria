@@ -116,12 +116,12 @@ export default function Home() {
       {/* Instagram CTA */}
       <section className="py-16 px-6 bg-[#0a0a0a] text-center">
         <a
-          href="https://instagram.com/socceria"
+          href="https://instagram.com/socceria.nyc"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#a89888] hover:text-[#f5efe6] text-sm uppercase tracking-[0.2em] font-light transition-colors"
         >
-          Follow @socceria on Instagram
+          Follow @socceria.nyc on Instagram
         </a>
       </section>
     </>

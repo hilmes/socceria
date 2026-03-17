@@ -65,7 +65,7 @@ export default function Footer() {
                 Follow
               </h4>
               <a
-                href="https://instagram.com/socceria"
+                href="https://instagram.com/socceria.nyc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm hover:text-[#f5efe6] transition-colors"
