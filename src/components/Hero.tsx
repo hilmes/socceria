@@ -1,40 +1,68 @@
 export default function Hero() {
   return (
-    <section className="relative bg-stone-900 text-white overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-red-950 opacity-90" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay">
+      {/* Background image — full bleed restaurant photography */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop')",
+        }}
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+
+      {/* Subtle warm gradient from bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]/40" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 md:py-48 text-center">
-        <p className="text-red-400 uppercase tracking-widest text-sm font-semibold mb-4">
-          Authentic Italian Cuisine
-        </p>
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-          Where Every Meal<br />
-          <span className="text-red-500">Tells a Story</span>
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Restaurant name — massive */}
+        <h1
+          className="text-6xl sm:text-8xl md:text-9xl font-bold tracking-tight text-[#f5efe6] mb-6"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
+          Socceria
         </h1>
-        <p className="text-stone-300 text-xl max-w-2xl mx-auto mb-10">
-          Handcrafted pasta, wood-fired oven, the finest seasonal ingredients —
-          brought together in the heart of the neighborhood.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/menu"
-            className="bg-red-700 hover:bg-red-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors"
-          >
-            Explore the Menu
-          </a>
-          <a
-            href="/contact"
-            className="border border-white/40 hover:border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors"
-          >
-            Reserve a Table
-          </a>
+
+        {/* Ornamental divider */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="h-px w-12 bg-[#c9a96e]/50" />
+          <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">
+            Brooklyn
+          </span>
+          <div className="h-px w-12 bg-[#c9a96e]/50" />
         </div>
+
+        {/* Tagline */}
+        <p
+          className="text-xl sm:text-2xl md:text-3xl text-[#c4956a] font-light tracking-wide mb-10"
+          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+        >
+          Upscale Mexican Cantina
+        </p>
+
+        {/* Status + Hours */}
+        <div className="space-y-3 mb-12">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#e8e0d8]/80 font-light">
+            Open Tuesday through Sunday
+          </p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#8a5a5a]">
+            Closed Mondays
+          </p>
+        </div>
+
+        {/* Address */}
+        <p className="text-sm text-[#a89888] tracking-wide">
+          Brooklyn, New York
+        </p>
       </div>
 
-      {/* Decorative bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#c9a96e]/40" />
+      </div>
     </section>
   );
 }
