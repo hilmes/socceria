@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -17,12 +18,15 @@ export default function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-sm border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-serif text-2xl md:text-3xl tracking-wide text-[#f5efe6] hover:text-[#c9a96e] transition-colors"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
-          Socceria
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <Image
+            src="/socceria-logo-white.svg"
+            alt="Socceria"
+            width={140}
+            height={40}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop links */}
