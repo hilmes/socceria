@@ -5,9 +5,6 @@ import { sendDeckAccessEmail } from "@/lib/deck-email";
 /**
  * POST /api/deck/gate
  * Accept an email, generate a verification code, and send a magic link.
- *
- * Simple in-memory rate limiting (per-process). For production scale,
- * swap with Upstash Redis rate limiting.
  */
 
 const recentEmails = new Map<string, number>();
@@ -46,7 +43,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ status: "email_sent", email: normalizedEmail });
   } catch (err) {
-    console.error("Deck gate error:", err);
-    return NextResponse.json({ error: "Internal error" }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Deck gate error:", message);
+    return NextResponse.json(
+      { error: "Internal error", detail: message },
+      { status: 500 }
+    );
   }
 }
