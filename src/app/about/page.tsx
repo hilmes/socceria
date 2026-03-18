@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About — Socceria",
   description:
-    "The story behind Socceria — an upscale Mexican cantina in Brooklyn, New York.",
+    "The story behind Socceria — a Mexican cantina in Brooklyn, New York.",
 };
 
 export default function AboutPage() {
@@ -53,11 +53,10 @@ export default function AboutPage() {
             </p>
 
             <p className="text-[#a89888] text-base md:text-lg leading-relaxed">
-              Our kitchen runs on fire. Mesquite and oak fuel our wood-burning
-              oven and grill, imparting the deep, smoky character that defines
-              our cooking. Masa is ground fresh each morning. Chiles are toasted
-              and ground in-house. Salsas are charred over open flame. Nothing
-              comes from a jar.
+              Our kitchen runs on tradition and technique. Masa is ground fresh
+              each morning. Chiles are toasted and ground in-house. Salsas are
+              charred over open flame. Nothing comes from a jar, nothing comes
+              from a shortcut.
             </p>
 
             <p className="text-[#a89888] text-base md:text-lg leading-relaxed">
@@ -88,11 +87,11 @@ export default function AboutPage() {
                 className="text-xl text-[#f5efe6] mb-4"
                 style={{ fontFamily: "'Fraunces', Georgia, serif" }}
               >
-                Wood-Fired
+                Handcrafted
               </h3>
               <p className="text-[#8a7a6a] text-sm leading-relaxed">
-                Mesquite and oak. Open flame. Every protein, every char, every
-                layer of smoke is earned — never simulated.
+                Every dish built by hand. Tortillas pressed to order, salsas
+                ground in molcajete, moles layered over days.
               </p>
             </div>
             <div className="text-center">

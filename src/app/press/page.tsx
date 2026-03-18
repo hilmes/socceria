@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Press & Accolades — Socceria",
   description:
-    "Press coverage and accolades for Socceria, Brooklyn's upscale Mexican cantina.",
+    "Press coverage and accolades for Socceria, Brooklyn's Mexican cantina.",
 };
 
 interface PressItem {

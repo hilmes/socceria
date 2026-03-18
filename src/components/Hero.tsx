@@ -28,9 +28,17 @@ export default function Hero() {
           />
         </div>
 
-        {/* Address */}
-        <p className="text-base sm:text-lg text-[#e8e0d8]/90 tracking-[0.15em] uppercase font-light mb-3">
-          46 Norman Ave · Greenpoint · Brooklyn
+        {/* Address — the vibe */}
+        <p
+          className="text-lg sm:text-xl md:text-2xl text-[#e8e0d8]/90 tracking-[0.2em] uppercase font-light mb-6"
+          style={{ fontFamily: "'Fraunces', Georgia, serif", letterSpacing: '0.15em' }}
+        >
+          46 Norman. Greenpoint. Brooklyn. NYC. Earth.
+        </p>
+
+        {/* Tagline */}
+        <p className="text-sm sm:text-base text-[#a89888] tracking-[0.2em] uppercase font-light mb-8">
+          Mexican food. Brooklyn soul.
         </p>
 
         {/* Ornamental divider */}

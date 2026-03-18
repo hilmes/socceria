@@ -348,7 +348,7 @@ export default function MenuPage() {
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-[#c9a96e]/40" />
           <p className="text-[#c9a96e] text-xs uppercase tracking-[0.3em]">
-            Wood-Fired Mexican Cuisine
+            Handmade Mexican Cuisine
           </p>
           <div className="h-px w-12 bg-[#c9a96e]/40" />
         </div>
