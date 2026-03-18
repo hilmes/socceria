@@ -19,44 +19,32 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Restaurant name — massive */}
-        <h1
-          className="text-6xl sm:text-8xl md:text-9xl font-bold tracking-tight text-[#f5efe6] mb-6"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
-          Socceria
-        </h1>
+        {/* Logo — front and center */}
+        <div className="flex justify-center mb-8">
+          <img
+            src="/socceria-logo-white.svg"
+            alt="Socceria"
+            className="w-72 sm:w-96 md:w-[480px] h-auto"
+          />
+        </div>
+
+        {/* Address */}
+        <p className="text-base sm:text-lg text-[#e8e0d8]/90 tracking-[0.15em] uppercase font-light mb-3">
+          46 Norman Ave · Greenpoint · Brooklyn
+        </p>
 
         {/* Ornamental divider */}
-        <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="flex items-center justify-center gap-4 mb-6">
           <div className="h-px w-12 bg-[#c9a96e]/50" />
           <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">
-            Brooklyn
+            Open Tue – Sun
           </span>
           <div className="h-px w-12 bg-[#c9a96e]/50" />
         </div>
 
-        {/* Tagline */}
-        <p
-          className="text-xl sm:text-2xl md:text-3xl text-[#c4956a] font-light tracking-wide mb-10"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-        >
-          Upscale Mexican Cantina
-        </p>
-
-        {/* Status + Hours */}
-        <div className="space-y-3 mb-12">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#e8e0d8]/80 font-light">
-            Open Tuesday through Sunday
-          </p>
-          <p className="text-xs uppercase tracking-[0.2em] text-[#8a5a5a]">
-            Closed Mondays
-          </p>
-        </div>
-
-        {/* Address */}
-        <p className="text-sm text-[#a89888] tracking-wide">
-          Brooklyn, New York
+        {/* Closed Mondays */}
+        <p className="text-xs uppercase tracking-[0.2em] text-[#8a5a5a]">
+          Closed Mondays
         </p>
       </div>
 
