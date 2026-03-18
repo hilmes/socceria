@@ -8,7 +8,7 @@ import DeckGate from "./DeckGate";
  *
  * On load:
  * 1. Check for existing session cookie via /api/deck/gate/validate
- * 2. If valid → show deck content
+ * 2. If valid → show deck content (fetched from topstar copy API)
  * 3. If not → show DeckGate (email verification flow)
  */
 export default function DeckPage() {
@@ -16,6 +16,7 @@ export default function DeckPage() {
     "checking" | "gated" | "authenticated"
   >("checking");
   const [viewerEmail, setViewerEmail] = useState<string | null>(null);
+  const [deckCopy, setDeckCopy] = useState<Record<string, unknown> | null>(null);
 
   useEffect(() => {
     // Check for ?verify= param first — let DeckGate handle it
@@ -38,6 +39,17 @@ export default function DeckPage() {
       })
       .catch(() => setState("gated"));
   }, []);
+
+  // Fetch deck copy from topstar once authenticated
+  useEffect(() => {
+    if (state !== "authenticated") return;
+    fetch("https://topstar-nyc.com/api/deck/copy", { cache: "no-store" })
+      .then((r) => r.json())
+      .then((data) => setDeckCopy(data))
+      .catch(() => {
+        // Silently fail — deck renders with placeholder until copy loads
+      });
+  }, [state]);
 
   if (state === "checking") {
     return (
@@ -81,11 +93,17 @@ export default function DeckPage() {
           )}
         </div>
 
-        {/* Deck content placeholder — the parallel agent will build the actual slides */}
+        {/* Deck content */}
         <div className="flex flex-col items-center justify-center min-h-[50vh] border border-white/10 rounded-lg">
-          <p className="text-white/30 text-sm tracking-wide">
-            Deck content loading...
-          </p>
+          {deckCopy ? (
+            <p className="text-white/30 text-sm tracking-wide">
+              Deck loaded — {Object.keys(deckCopy).length} sections
+            </p>
+          ) : (
+            <p className="text-white/30 text-sm tracking-wide">
+              Deck content loading...
+            </p>
+          )}
           <p className="text-white/15 text-xs mt-2">
             Slides will be rendered here
           </p>
