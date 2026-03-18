@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
 
 :root {
   --background: #0a0a0a;
@@ -56,6 +56,18 @@ h1, h2, h3 {
 
 .font-serif {
   font-family: 'Fraunces', Georgia, serif;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   DECK FONTS — Investor deck typography (Barlow Condensed + DM Sans)
+   ════════════════════════════════════════════════════════════════════════ */
+
+.font-barlow-condensed {
+  font-family: var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
+}
+
+.font-dm-sans {
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
 }
 
 /* Subtle grain texture overlay */

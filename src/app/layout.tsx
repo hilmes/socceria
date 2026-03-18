@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Barlow_Condensed, DM_Sans } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -14,6 +12,20 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+  display: "swap",
+  variable: "--font-barlow-condensed",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-dm-sans",
 });
 
 export const metadata: Metadata = {
@@ -40,11 +52,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${fraunces.variable} ${inter.variable} antialiased min-h-screen flex flex-col bg-[#0a0a0a] text-[#e8e0d8]`}
+        className={`${fraunces.variable} ${inter.variable} ${barlowCondensed.variable} ${dmSans.variable} antialiased min-h-screen flex flex-col bg-[#0a0a0a] text-[#e8e0d8]`}
       >
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
