@@ -1,13 +1,14 @@
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay">
-      {/* Background image — full bleed restaurant photography */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop')",
-        }}
+      {/* Pitch-invading dog — looping background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="https://82kji4cadp9uioad.public.blob.vercel-storage.com/pitch-invading-dog.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
 
       {/* Dark overlay */}
