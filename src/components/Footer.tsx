@@ -12,13 +12,13 @@ export default function Footer() {
           <div>
             <h3
               className="text-[#f5efe6] text-3xl mb-4 tracking-wide"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Socceria
             </h3>
             <p className="text-sm leading-relaxed text-[#8a7a6a] max-w-xs">
-              An upscale Mexican cantina in the heart of Brooklyn.
-              Wood-fired cuisine, handcrafted cocktails, and the soul of Mexico.
+              Mexican food. Brooklyn soul.
+              Handcrafted dishes, handcrafted cocktails.
             </p>
           </div>
 

@@ -20,15 +20,15 @@ export default function Home() {
 
           <p
             className="text-2xl md:text-3xl leading-relaxed text-[#e8e0d8] font-light mb-8"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
-            Socceria is a wood-fired Mexican cantina rooted in tradition and
+            Socceria is a Mexican cantina rooted in tradition and
             elevated by craft. Every dish is built from scratch — masa ground
             daily, salsas charred over open flame, proteins cooked low and slow
             over mesquite and oak.
           </p>
           <p className="text-[#a89888] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            From huitlacoche garnachas at brunch to wood-fired pollo a la leña
+            From huitlacoche garnachas at brunch to pollo a la leña
             at dinner, we honor the depth of Mexican culinary tradition while
             keeping it intimate, seasonal, and unmistakably Brooklyn.
           </p>
@@ -53,7 +53,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto text-center">
           <h2
             className="text-4xl md:text-5xl text-[#f5efe6] mb-12 tracking-tight"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
             Hours
           </h2>

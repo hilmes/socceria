@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Menu — Socceria",
   description:
-    "Brunch, dinner, cocktails, and more at Socceria. Wood-fired Mexican cuisine in Brooklyn.",
+    "Brunch, dinner, cocktails, and more at Socceria. Handmade Mexican cuisine in Brooklyn.",
 };
 
 interface MenuItem {
@@ -140,7 +140,7 @@ const dinnerSections: MenuSection[] = [
       {
         name: "Pollo a la Leña",
         description:
-          "Half chicken, wood-fired, adobo glaze, grilled nopales, rice, beans",
+          "Half chicken, adobo glaze, grilled nopales, rice, beans",
         highlight: true,
       },
       {
@@ -294,7 +294,7 @@ function MenuSectionBlock({ section }: { section: MenuSection }) {
       <div className="mb-8">
         <h3
           className="text-2xl md:text-3xl text-[#f5efe6] tracking-tight"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          style={{ fontFamily: "'Fraunces', Georgia, serif" }}
         >
           {section.title}
         </h3>
@@ -315,7 +315,7 @@ function MenuSectionBlock({ section }: { section: MenuSection }) {
                   item.highlight ? "text-[#c9a96e]" : "text-[#e8e0d8]"
                 }`}
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'Fraunces', Georgia, serif",
                   fontWeight: 500,
                 }}
               >
@@ -341,7 +341,7 @@ export default function MenuPage() {
       <section className="py-24 md:py-32 px-6 bg-[#0a0a0a] text-center">
         <h1
           className="text-5xl md:text-7xl text-[#f5efe6] tracking-tight mb-6"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          style={{ fontFamily: "'Fraunces', Georgia, serif" }}
         >
           The Menu
         </h1>
@@ -360,7 +360,7 @@ export default function MenuPage() {
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl text-[#f5efe6] tracking-tight mb-3"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Brunch
             </h2>
@@ -385,7 +385,7 @@ export default function MenuPage() {
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl text-[#f5efe6] tracking-tight mb-3"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Dinner
             </h2>
@@ -410,7 +410,7 @@ export default function MenuPage() {
           <div className="text-center mb-16">
             <h2
               className="text-3xl md:text-4xl text-[#f5efe6] tracking-tight mb-3"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Drinks
             </h2>

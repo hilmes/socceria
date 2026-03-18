@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   --background: #0a0a0a;
@@ -17,8 +17,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-  --font-display: var(--font-cormorant);
+  --font-serif: var(--font-fraunces);
+  --font-display: var(--font-fraunces);
 }
 
 * {
@@ -44,18 +44,18 @@ body {
   color: #f5efe6;
 }
 
-/* Playfair Display for headings */
+/* Fraunces for headings — moody, literary, organic */
 h1, h2, h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
 }
 
-/* Cormorant Garamond for menu items and elegant body */
+/* Fraunces for display text and elegant body */
 .font-display {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
 }
 
 .font-serif {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
 }
 
 /* Subtle grain texture overlay */

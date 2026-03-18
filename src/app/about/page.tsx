@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h1
             className="text-5xl md:text-7xl text-[#f5efe6] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            style={{ fontFamily: "'Fraunces', Georgia, serif" }}
           >
             About
           </h1>
@@ -45,7 +45,7 @@ export default function AboutPage() {
           <div className="space-y-8">
             <p
               className="text-2xl md:text-3xl text-[#e8e0d8] font-light leading-relaxed"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "'Fraunces', Georgia, serif" }}
             >
               Socceria was born from a belief that Mexican cuisine deserves the
               same reverence given to any of the world&apos;s great culinary
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h3
                 className="text-xl text-[#f5efe6] mb-4"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "'Fraunces', Georgia, serif" }}
               >
                 Wood-Fired
               </h3>
@@ -98,7 +98,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h3
                 className="text-xl text-[#f5efe6] mb-4"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "'Fraunces', Georgia, serif" }}
               >
                 From Scratch
               </h3>
@@ -110,7 +110,7 @@ export default function AboutPage() {
             <div className="text-center">
               <h3
                 className="text-xl text-[#f5efe6] mb-4"
-                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                style={{ fontFamily: "'Fraunces', Georgia, serif" }}
               >
                 Brooklyn Soul
               </h3>
