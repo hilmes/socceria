@@ -36,17 +36,13 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Logo — perfectly centered on screen */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+      {/* Logo + text — centered together on screen */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 gap-6">
         <img 
           src="/socceria-logo-white.svg" 
           alt="Socceria" 
           className="w-[80vw] md:w-[65vw] max-w-4xl h-auto drop-shadow-lg"
         />
-      </div>
-
-      {/* Bottom text */}
-      <div className="absolute bottom-0 inset-x-0 z-10 flex flex-col items-center gap-4 pb-12 md:pb-16">
         <span className="text-xs md:text-sm text-white/50 tracking-widest text-center uppercase">
           GREENPOINT // BROOKLYN // NYC
         </span>
