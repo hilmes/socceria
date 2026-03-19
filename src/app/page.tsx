@@ -11,7 +11,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="h-screen relative overflow-hidden">
       {/* Full-screen Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <video
