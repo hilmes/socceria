@@ -45,7 +45,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="flex flex-col items-center gap-4 pb-4">
+        <div className="flex flex-col items-center gap-4 flex-1 justify-center">
           <span className="text-xs md:text-sm text-white/50 tracking-widest text-center uppercase">
             GREENPOINT // BROOKLYN // NYC
           </span>
