@@ -36,28 +36,28 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      <div className="relative z-10 min-h-screen flex flex-col px-6 py-12 md:py-16">
-        <div className="flex-1 flex items-center justify-center">
-          <img 
-            src="/socceria-logo-white.svg" 
-            alt="Socceria" 
-            className="w-[80vw] md:w-[65vw] max-w-4xl h-auto drop-shadow-lg"
-          />
-        </div>
+      {/* Logo — perfectly centered on screen */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+        <img 
+          src="/socceria-logo-white.svg" 
+          alt="Socceria" 
+          className="w-[80vw] md:w-[65vw] max-w-4xl h-auto drop-shadow-lg"
+        />
+      </div>
 
-        <div className="flex flex-col items-center gap-4 flex-1 justify-center">
-          <span className="text-xs md:text-sm text-white/50 tracking-widest text-center uppercase">
-            GREENPOINT // BROOKLYN // NYC
-          </span>
-          <a
-            href="https://instagram.com/soccerianyc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-white/40 hover:text-white/60 tracking-widest uppercase transition-colors"
-          >
-            @SOCCERIANYC
-          </a>
-        </div>
+      {/* Bottom text */}
+      <div className="absolute bottom-0 inset-x-0 z-10 flex flex-col items-center gap-4 pb-12 md:pb-16">
+        <span className="text-xs md:text-sm text-white/50 tracking-widest text-center uppercase">
+          GREENPOINT // BROOKLYN // NYC
+        </span>
+        <a
+          href="https://instagram.com/soccerianyc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-white/40 hover:text-white/60 tracking-widest uppercase transition-colors"
+        >
+          @SOCCERIANYC
+        </a>
       </div>
     </main>
   );
