@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef, FormEvent } from "react";
 
 interface DeckGateProps {
-  recipientName: string | null;
-  recipientEmail: string | null;
-  onSuccess: (viewerEmail: string, sessionToken: string, recipientName: string | null) => void;
+  recipientName?: string | null;
+  recipientEmail?: string | null;
+  onSuccess: (viewerEmail: string, sessionToken?: string, recipientName?: string | null) => void;
 }
 
 type Step = "email" | "loading" | "email_sent" | "verifying" | "verify_failed";
