@@ -43,16 +43,13 @@ export default function LandingPage() {
           alt="Socceria" 
           className="w-[80vw] md:w-[65vw] max-w-4xl h-auto drop-shadow-lg"
         />
-        <span className="text-xs md:text-sm text-white/50 tracking-widest text-center uppercase">
-          GREENPOINT // BROOKLYN // NYC
-        </span>
         <a
-          href="https://instagram.com/soccerianyc"
+          href="https://instagram.com/socceria.nyc"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-white/40 hover:text-white/60 tracking-widest uppercase transition-colors"
         >
-          @SOCCERIANYC
+          @SOCCERIA.NYC
         </a>
       </div>
     </main>

@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, FormEvent } from "react";
-import { VIDEO_ASSETS } from "@/lib/video-assets";
-import * as Sentry from "@sentry/nextjs";
 
 interface DeckGateProps {
   recipientName: string | null;
@@ -34,17 +32,6 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
 
   // Highlight: gate_loaded event — fires once on mount
   useEffect(() => {
-    Sentry.addBreadcrumb({
-      category: 'deck.gate',
-      message: 'gate_loaded',
-      data: {
-        hasRecipientName: !!recipientName,
-        hasReferral: typeof window !== 'undefined'
-          ? !!new URLSearchParams(window.location.search).get('v')
-          : false,
-      },
-      level: 'info',
-    });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -65,11 +52,6 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
       .then((data) => {
         if (data.valid) {
           // Highlight: identify viewer + track email_verified
-          Sentry.setUser({
-            email: data.viewerEmail,
-            username: data.recipientName ?? 'unknown',
-          });
-          Sentry.captureMessage('email_verified', {
             level: 'info',
             extra: {
               isOwner: data.isOwner ?? false,
@@ -79,13 +61,11 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
           window.history.replaceState({}, "", window.location.pathname);
           onSuccess(data.viewerEmail, data.sessionToken, data.recipientName ?? null);
         } else {
-          Sentry.addBreadcrumb({ category: 'deck.gate', message: 'gate_verify_failed', data: { error: data.error || 'Link expired.' }, level: 'warning' });
           setError(data.error || "Link expired.");
           setStep("verify_failed");
         }
       })
       .catch(() => {
-        Sentry.addBreadcrumb({ category: 'deck.gate', message: 'gate_verify_failed', data: { error: 'network_error' }, level: 'warning' });
         setStep("verify_failed");
         setError("Something went wrong.");
       });
@@ -116,7 +96,7 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
     setStep("loading");
     setError("");
     // Track email submission (email value not captured in breadcrumb for privacy)
-    Sentry.addBreadcrumb({ category: 'deck.gate', message: 'email_submitted', level: 'info' });
+    
     try {
       const res = await fetch("/api/deck/gate", {
         method: "POST",
@@ -282,7 +262,7 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
             transform: "translate(-50%, -50%)",
             objectFit: "cover",
           }}
-          src={VIDEO_ASSETS.peleBackground}
+          src={"https://82kji4cadp9uioad.public.blob.vercel-storage.com/pitch-invading-dog.mp4"}
           autoPlay
           muted
           loop
