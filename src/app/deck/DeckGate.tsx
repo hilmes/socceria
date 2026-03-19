@@ -51,13 +51,6 @@ export default function DeckGate({ recipientName, recipientEmail, onSuccess }: D
       .then((r) => r.json())
       .then((data) => {
         if (data.valid) {
-          // Highlight: identify viewer + track email_verified
-            level: 'info',
-            extra: {
-              isOwner: data.isOwner ?? false,
-              isForwarded: !(data.isOwner ?? false),
-            },
-          });
           window.history.replaceState({}, "", window.location.pathname);
           onSuccess(data.viewerEmail, data.sessionToken, data.recipientName ?? null);
         } else {
